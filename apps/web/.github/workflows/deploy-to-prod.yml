@@ -1,5 +1,10 @@
-name: "Deploy to web"
+name: "Deploy Web Project to Prod"
+description: "Deploy Web Project to Prod using the action in the monorepo"
+runs:
+  using: "composite"
+  steps:
+    - name: Install
+      run: pnpm install
 
-jobs:
-  - run: pnpm install
-  - run: pnpm build
+    - name: Build
+      run: pnpm build
