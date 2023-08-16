@@ -1,6 +1,29 @@
-name: Main Deploy
+- name: Setup Node.js
+  uses: actions/setup-node@v2
+  with:
+    node-version: 16
 
-on:
-  push:
-    branches:
-      - main
+- name: Install Dependencies
+  run: pnpm install
+
+- name: Check Changes
+  uses: dorny/paths-filter@v2
+  id: filter
+  with:
+    filters: |
+      web:
+        - "web/**"
+      docs:
+        - "docs/**"
+
+- name: Deploy web Project
+  if: steps.filter.outputs.web == 'true'
+  run: |
+    echo "Deploy web Project"
+    # web project의 deploy.yml 실행 로직
+
+- name: Deploy docs Project
+  if: steps.filter.outputs.docs == 'true'
+  run: |
+    echo "Deploy B Project"
+    # docs project의 deploy.yml 실행 로직
