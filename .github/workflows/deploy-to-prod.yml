@@ -12,6 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install pnpm
+        run: npm install -g pnpm@6
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
