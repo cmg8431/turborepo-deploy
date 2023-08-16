@@ -29,9 +29,9 @@ jobs:
         with:
           filters: |
             web:
-              - "web/**"
+              - "services/web/**"
             docs:
-              - "docs/**"
+              - "services/docs/**"
 
       - name: Deploy web Project
         if: steps.filter.outputs.web == 'true'
