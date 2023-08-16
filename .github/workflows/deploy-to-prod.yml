@@ -35,9 +35,10 @@ jobs:
 
       - name: Deploy web Project
         if: steps.filter.outputs.web == 'true'
-        run: |
-          echo "Deploy web Project"
-          # web project의 deploy.yml 실행 로직
+        uses: ../apps/web/.github/workflows/deploy-to-prod.yml
+        # run: |
+        #   echo "Deploy web Project"
+        #   # web project의 deploy.yml 실행 로직
 
       - name: Deploy docs Project
         if: steps.filter.outputs.docs == 'true'

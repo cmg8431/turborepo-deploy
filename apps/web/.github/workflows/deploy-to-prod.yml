@@ -1,0 +1,5 @@
+name: "Deploy to web"
+
+jobs:
+  - run: pnpm install
+  - run: pnpm build
