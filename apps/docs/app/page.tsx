@@ -5,6 +5,7 @@ export default function Page() {
     <>
       <Header text="Docs" />
       <Button />
+      <div>test</div>
     </>
   );
 }
