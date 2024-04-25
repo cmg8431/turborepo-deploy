@@ -5,6 +5,7 @@ runs:
   using: 'composite'
   steps:
     - name: Expose yarn config as "$GITHUB_OUTPUT"
+      shell: bash  # Add the shell property here
       run: |
           echo "Deploy docs Project"
           # docs project의 deploy.yml 실행 로직

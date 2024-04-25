@@ -1,7 +1,7 @@
 import { Button, Header } from "ui";
 
 export default function Page() {
-  console.log('tes1t')
+  console.log('tes2t')
 
   return (
     <>
