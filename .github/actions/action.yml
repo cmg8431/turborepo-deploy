@@ -1,0 +1,10 @@
+name: 'Monorepo install (yarn)'
+description: 'Run yarn install'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Expose yarn config as "$GITHUB_OUTPUT"
+      run: |
+          echo "Deploy docs Project"
+          # docs project의 deploy.yml 실행 로직
