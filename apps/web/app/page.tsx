@@ -1,7 +1,7 @@
 import { Button, Header } from "ui";
 
 export default function Page() {
-  console.log('test1')
+  console.log('test')
 
   return (
     <>
