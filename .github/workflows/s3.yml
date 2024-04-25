@@ -1,0 +1,11 @@
+name: S3 Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  - name: test
+    run: |
+      echo "Deploy docs Project"
